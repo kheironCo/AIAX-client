@@ -1,6 +1,11 @@
 # Comands
 
 **Install dependencies**
+Thanks for forgetting this line
+
+```
+npm install --global yarn
+```
 
 ```bash
 yarn
