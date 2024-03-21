@@ -1,19 +1,18 @@
 :root {
-  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
-  line-height: 1.5;
-  font-weight: 400;
-
-  color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
-
-  font-synthesis: none;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+--primary-color: #281A34;
+--secondary-color: #583B6B;
+--tertiary-color: #AB99B2;
+--mono-first-color: #B3B3B3;
+--mono-second-color: #4D4D4D;
+--mono-thirt-color: #1A1A1A;
 }
 
+
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Blinker:wght@100;200;300;400;600;700;800;900&family=Quicksand:wght@300..700&display=swap');
+
 body {
+  font-family: "Quicksand", Verdana, sans-serif;
   margin: 0;
   display: flex;
   place-items: center;
@@ -27,8 +26,8 @@ h1 {
 }
 
 @media (prefers-color-scheme: light) {
-  :root {
-    color: #213547;
+  /* :root {
+    color: #1A1A1A;
     background-color: #ffffff;
   }
 
@@ -38,5 +37,5 @@ h1 {
 
   button {
     background-color: #f9f9f9;
-  }
+  } */
 }
