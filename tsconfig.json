@@ -22,6 +22,12 @@
     "noUnusedLocals": true,
     "noUnusedParameters": true,
     "noFallthroughCasesInSwitch": true,
+
+    /* Paths */
+    "baseUrl": "./src",
+    "paths": {
+      "graphql/*": [ "graphql/*" ]
+    }
   },
   "include": [ "src" ],
   "references": [ { "path": "./tsconfig.node.json" } ]
