@@ -1,10 +1,10 @@
 :root {
---primary-color: #281A34;
---secondary-color: #583B6B;
---tertiary-color: #AB99B2;
---mono-first-color: #B3B3B3;
---mono-second-color: #4D4D4D;
---mono-thirt-color: #1A1A1A;
+  --primary-color: #281A34;
+  --secondary-color: #583B6B;
+  --tertiary-color: #AB99B2;
+  --mono-first-color: #B3B3B3;
+  --mono-second-color: #4D4D4D;
+  --mono-thirt-color: #1A1A1A;
 }
 
 
@@ -14,8 +14,7 @@
 body {
   font-family: "Quicksand", Verdana, sans-serif;
   margin: 0;
-  display: flex;
-  place-items: center;
+  display: block;
   min-width: 320px;
   min-height: 100vh;
 }
