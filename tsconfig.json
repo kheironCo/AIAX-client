@@ -26,7 +26,8 @@
     /* Paths */
     "baseUrl": "./src",
     "paths": {
-      "graphql/*": [ "graphql/*" ]
+      "assets": [ "assets" ],
+      "graphql": [ "graphql" ]
     }
   },
   "include": [ "src" ],
