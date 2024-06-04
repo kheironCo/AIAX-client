@@ -9,7 +9,7 @@ export default defineConfig({
   resolve: {
     alias: {
       assets: resolve(__dirname, './src/assets'),
-      graphql: resolve(__dirname, './src/graphql'),
+      graph: resolve(__dirname, './src/graphql'),
     },
   },
 });

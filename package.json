@@ -9,13 +9,16 @@
     "lint": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
     "lint-staged": "lint-staged",
     "format": "prettier --write ./src",
-    "kusky": "husky",
-    "preview": "vite preview"
+    "husky": "husky",
+    "preview": "vite preview",
+    "postinstall": "husky"
   },
   "lint-staged": {
     "*.{ts, tsx}": [
-      "prettier --write",
       "eslint"
+    ],
+    "*": [
+      "prettier --write --ignore-unknown"
     ]
   },
   "dependencies": {
