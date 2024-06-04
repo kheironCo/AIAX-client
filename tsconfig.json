@@ -2,7 +2,7 @@
   "compilerOptions": {
     "target": "ES2020",
     "useDefineForClassFields": true,
-    "lib": [ "ES2020", "DOM", "DOM.Iterable" ],
+    "lib": ["ES2020", "DOM", "DOM.Iterable"],
     "module": "ESNext",
     "skipLibCheck": true,
 
@@ -26,10 +26,9 @@
     /* Paths */
     "baseUrl": "./src",
     "paths": {
-      "assets": [ "assets" ],
-      "graphql": [ "graphql" ]
+      "graph": ["./graphql"]
     }
   },
-  "include": [ "src" ],
-  "references": [ { "path": "./tsconfig.node.json" } ]
+  "include": ["src"],
+  "references": [{ "path": "./tsconfig.node.json" }]
 }

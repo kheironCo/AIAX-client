@@ -1,18 +1,17 @@
-:root {
-  --primary-color: #281A34;
-  --secondary-color: #583B6B;
-  --tertiary-color: #AB99B2;
-  --mono-first-color: #B3B3B3;
-  --mono-second-color: #4D4D4D;
-  --mono-thirt-color: #1A1A1A;
-}
-
-
 @import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Blinker:wght@100;200;300;400;600;700;800;900&family=Quicksand:wght@300..700&display=swap');
 
+:root {
+  --primary-color: #281a34;
+  --secondary-color: #583b6b;
+  --tertiary-color: #ab99b2;
+  --mono-first-color: #b3b3b3;
+  --mono-second-color: #4d4d4d;
+  --mono-thirt-color: #1a1a1a;
+}
+
 body {
-  font-family: "Quicksand", Verdana, sans-serif;
+  font-family: 'Quicksand', Verdana, sans-serif;
   margin: 0;
   display: block;
   min-width: 320px;
