@@ -1,0 +1,50 @@
+.main {
+  width: 100vw;
+  height: 100vh;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.bloque {
+  width: 50vw;
+  background-color: #583d6b;
+  height: 280px;
+  border-radius: 15px 0 0 15px;
+}
+.titulo {
+  width: 40vw;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 50px;
+}
+.titulo h1 {
+  width: 35vw;
+  background: linear-gradient(to right, #583d6b, #a875cd);
+  -webkit-background-clip: text;
+  color: transparent;
+  font-family: 'Blinker', sans-serif;
+}
+.tituloPadre {
+  width: 50vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.btn {
+  color: white;
+  border-radius: 5px;
+  padding: 15px 30px;
+  border: none;
+  font-weight: 700;
+  font-size: medium;
+  margin: 5px;
+  background-color: #ffc107;
+}
+.btn:hover {
+  cursor: pointer;
+}

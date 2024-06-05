@@ -1,23 +1,28 @@
+// import "./styles.css"
 import { NavLink } from 'react-router-dom';
 import logo from '../imgs/logo.svg';
-// import "./style.css"
-import { styles } from './styles';
-import { css } from '@emotion/react';
+import { NavBarStyle } from './styles';
 
 export const NavBar = () => {
   return (
-    <div css={css(styles)}>
-      <nav>
+    <div>
+      <nav css={NavBarStyle}>
         <img src={logo} alt="logo" />
-        <div>
-          <div>
-            <NavLink to="#">Contacto</NavLink>
-            <NavLink to="#">Producto</NavLink>
-            <NavLink to="#">Precios</NavLink>
+        <div className="divDerechaNav">
+          <div className="divChicoPadre">
+            <NavLink to="/contacto" className="divChico">
+              Contacto
+            </NavLink>
+            <NavLink to="/producto" className="divChico">
+              Producto
+            </NavLink>
+            <NavLink to="/precios" className="divChico">
+              Precios
+            </NavLink>
           </div>
           <div>
-            <button>Login</button>
-            <button>Register</button>
+            <button className="btnLogin">Login</button>
+            <button className="btnRegister">Register</button>
           </div>
         </div>
       </nav>
