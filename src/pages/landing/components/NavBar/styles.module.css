@@ -7,7 +7,7 @@ nav {
   background-color: #583d6b;
   position: absolute;
   top: 0px;
-  width: 98.5vw;
+  width: 97.5vw;
   height: 70px;
   display: flex;
   align-items: center;
@@ -15,7 +15,7 @@ nav {
   justify-content: space-between;
 }
 
-nav img {
+img {
   width: 120px;
 }
 .btnLogin:hover,

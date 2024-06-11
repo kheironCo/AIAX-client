@@ -1,0 +1,61 @@
+.h2 {
+  background: linear-gradient(to right, #583d6b, #a875cd);
+  -webkit-background-clip: text;
+  color: transparent;
+  font-family: 'Blinker', sans-serif;
+  font-size: 40px;
+  display: flex;
+  justify-content: center;
+  overflow: hidden;
+}
+.art {
+  width: 91vw;
+  height: 95vh;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+  justify-content: baseline;
+  margin-left: 90px;
+}
+
+.section {
+  width: 70%;
+  height: 70%;
+  padding: 30px 70px;
+  border-left: 8px solid #a34fba;
+  margin-bottom: 100px;
+  margin-left: 70px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  overflow: hidden;
+}
+.confianza {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  margin: 20px;
+  overflow: hidden;
+}
+.confianza h3 {
+  padding: 20px;
+}
+.confianza img {
+  width: 80%;
+  border-radius: 10px 10px 0 0;
+}
+.confianza p {
+  width: 85%;
+}
+.padreConfianza {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+h3 {
+  color: #a34fba;
+  font-size: 27px;
+}
