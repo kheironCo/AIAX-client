@@ -54,3 +54,7 @@ img {
   text-decoration: none;
   padding-right: 40px;
 }
+.separar {
+  display: flex;
+  gap: 5px;
+}

@@ -1,15 +1,12 @@
-import imagenmanos from '../imgs/imagenmanos.png';
 import styles from './styles.module.css';
+import { arregloTypes } from './Types';
 
-export const Confianza = () => {
+export const Confianza = ({ img, titulo, parrafo }: arregloTypes) => {
   return (
     <div className={styles.confianza}>
-      <img src={imagenmanos} alt="Imagen de manos" />
-      <h3>Confianza</h3>
-      <p>
-        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nam consequuntur vero excepturi
-        porro et inventore modi quas.
-      </p>
+      <img src={img} alt="Imagen de manos" className={styles.img} />
+      <h3>{titulo}</h3>
+      <p>{parrafo}</p>
     </div>
   );
 };

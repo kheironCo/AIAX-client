@@ -7,6 +7,7 @@
   display: flex;
   justify-content: center;
   overflow: hidden;
+  padding-bottom: 20px;
 }
 .art {
   width: 91vw;
@@ -38,13 +39,15 @@
   flex-direction: column;
   margin: 20px;
   overflow: hidden;
+  width: 220px;
+  text-align: center;
 }
 .confianza h3 {
   padding: 20px;
 }
-.confianza img {
-  width: 80%;
-  border-radius: 10px 10px 0 0;
+.img {
+  width: 200px;
+  border-radius: 15px 15px 0 0;
 }
 .confianza p {
   width: 85%;

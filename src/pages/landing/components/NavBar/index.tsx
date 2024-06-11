@@ -1,6 +1,7 @@
 import { NavLink } from 'react-router-dom';
 import logo from '../imgs/logo.svg';
 import styles from './styles.module.css';
+import { ButtonKUI } from 'kheiron-ui';
 
 export const NavBar = () => {
   return (
@@ -19,9 +20,9 @@ export const NavBar = () => {
               Precios
             </NavLink>
           </div>
-          <div>
-            <button className={styles.btnLogin}>Login</button>
-            <button className={styles.btnRegister}>Register</button>
+          <div className={styles.separar}>
+            <ButtonKUI palette="gold">Login</ButtonKUI>
+            <ButtonKUI palette="orange">Register</ButtonKUI>
           </div>
         </div>
       </nav>

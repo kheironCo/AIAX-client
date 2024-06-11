@@ -26,8 +26,8 @@ importers:
         specifier: ^16.8.1
         version: 16.8.1
       kheiron-ui:
-        specifier: ^1.0.6
-        version: 1.0.6(@types/react@18.3.3)(react@18.3.1)
+        specifier: ^1.0.7
+        version: 1.0.7(@types/react@18.3.3)(react@18.3.1)
       react:
         specifier: ^18.3.1
         version: 18.3.1
@@ -2116,10 +2116,10 @@ packages:
         integrity: sha512-oxVHkHR/EJf2CNXnWxRLW6mg7JyCCUcG0DtEGmL2ctUo1PNTin1PUil+r/+4r5MpVgC/fn1kjsx7mjSujKqIpw==,
       }
 
-  kheiron-ui@1.0.6:
+  kheiron-ui@1.0.7:
     resolution:
       {
-        integrity: sha512-lXp4bPpK4S+j4u6K6gOPXzy4vrClSlT9kAqSpM1gaXcpkFiZ8ILpYh3H+zlH6XPzFRGeBozsIzOHdS8ovCsatQ==,
+        integrity: sha512-VA4PXUHzDzqiSBTK+LsFdyiQMstU0/RU3huCcvJp02m+AZrwHp0610wP6cnFGcaJxrVs0RzHkDZDy5e9WCVsYQ==,
       }
     engines: { node: '>=18.18.0' }
     peerDependencies:
@@ -4395,7 +4395,7 @@ snapshots:
     dependencies:
       json-buffer: 3.0.1
 
-  kheiron-ui@1.0.6(@types/react@18.3.3)(react@18.3.1):
+  kheiron-ui@1.0.7(@types/react@18.3.3)(react@18.3.1):
     dependencies:
       '@emotion/react': 11.11.4(@types/react@18.3.3)(react@18.3.1)
       react: 18.3.1
