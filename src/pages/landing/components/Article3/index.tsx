@@ -1,8 +1,8 @@
 import { Confianza } from './Confianza';
 import styles from './styles.module.css';
-import imagenmanos from '../imgs/imagenmanos.png';
+import imagenmanos from 'assets/imgs/imagenmanos.png';
 
-import { arregloTypes } from './Types';
+import { arregloTypes } from './types';
 
 const arregloCards: arregloTypes[] = [
   {

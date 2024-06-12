@@ -1,5 +1,5 @@
 import { NavLink } from 'react-router-dom';
-import logo from '../imgs/logo.svg';
+import logo from 'assets/imgs/logo.svg';
 import styles from './styles.module.css';
 import { ButtonKUI } from 'kheiron-ui';
 
