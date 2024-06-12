@@ -1,0 +1,43 @@
+.h2 {
+  background: linear-gradient(to right, #583d6b, #a875cd);
+  -webkit-background-clip: text;
+  color: transparent;
+  font-family: 'Blinker', sans-serif;
+  font-size: 40px;
+  display: flex;
+  justify-content: center;
+  overflow: hidden;
+}
+.art {
+  width: 91vw;
+  height: 95vh;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+  justify-content: end;
+  margin-right: 90px;
+}
+
+.section {
+  width: 60%;
+  height: 80%;
+  padding: 30px 130px;
+  border-right: 8px solid #a34fba;
+  margin-right: 70px;
+  margin-bottom: 100px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  overflow: hidden;
+}
+
+.section video {
+  width: 90%;
+  height: 80%;
+  padding: 50px;
+  margin-left: 20px;
+  font-size: 25px;
+  text-align: center;
+  font-weight: 650;
+}

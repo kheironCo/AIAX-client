@@ -1,0 +1,60 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+nav {
+  background-color: #583d6b;
+  position: absolute;
+  top: 0px;
+  width: 97.5vw;
+  height: 70px;
+  display: flex;
+  align-items: center;
+  padding: 0 10px;
+  justify-content: space-between;
+}
+
+img {
+  width: 120px;
+}
+.btnLogin:hover,
+.btnRegister:hover {
+  cursor: pointer;
+}
+.btnLogin,
+.btnRegister {
+  color: white;
+  border-radius: 5px;
+  padding: 10px 26px;
+  border: none;
+  font-weight: 600;
+  margin: 5px;
+}
+.btnLogin {
+  background-color: #ffc107;
+}
+.btnRegister {
+  background-color: #ff6347;
+}
+
+.divDerechaNav {
+  width: 56vw;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.divChicoPadre {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.divChico {
+  color: white;
+  text-decoration: none;
+  padding-right: 40px;
+}
+.separar {
+  display: flex;
+  gap: 5px;
+}

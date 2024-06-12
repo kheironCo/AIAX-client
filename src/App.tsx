@@ -1,6 +1,6 @@
 import { Outlet, Route, Routes } from 'react-router-dom';
 import { NavBar } from './pages/landing/components';
-import Home from './pages/landing/Home';
+import { Home } from './pages/landing/Home';
 import About from './pages/landing/Views/About';
 import BusinessRoute from './pages/business/routes';
 import UserRoute from './pages/dashboard/Home';

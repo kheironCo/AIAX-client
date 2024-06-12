@@ -1,0 +1,47 @@
+* {
+  overflow-x: hidden;
+}
+h1 {
+  overflow: hidden;
+}
+.main {
+  width: 99vw;
+  height: 100vh;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.bloque {
+  width: 50vw;
+  background-color: #583d6b;
+  height: 280px;
+  border-radius: 15px 0 0 15px;
+}
+.titulo {
+  width: 40vw;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 50px;
+}
+.titulo h1 {
+  width: 35vw;
+  background: linear-gradient(to right, #583d6b, #a875cd);
+  -webkit-background-clip: text;
+  color: transparent;
+  font-family: 'Blinker', sans-serif;
+}
+.tituloPadre {
+  width: 50vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.btn {
+  padding: 15px 40px !important;
+  font-size: 17px !important;
+}
