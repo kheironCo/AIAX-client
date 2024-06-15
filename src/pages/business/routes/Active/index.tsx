@@ -19,7 +19,7 @@ const ActiveTable = ({ data }: ActiveTableProps) => {
         details: 'Details',
         status: 'Status',
       }}
-      body={data as Record<string, any>[]}
+      body={data as Record<string, unknown>[]}
       renderBody={({ key, value }) => {
         if (UserResolver.isUser(key)) {
           return <UserResolver user={value} />;
