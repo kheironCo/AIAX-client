@@ -11,6 +11,7 @@ export default defineConfig({
       assets: resolve(__dirname, './src/assets'),
       graph: resolve(__dirname, './src/graphql'),
       types: resolve(__dirname, './src/types'),
+      'business/*': resolve(__dirname, './src/pages/business/*'),
     },
   },
 });

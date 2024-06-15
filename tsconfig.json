@@ -28,7 +28,8 @@
     "paths": {
       "assets": ["./assets"],
       "graph": ["./graphql"],
-      "types": ["./types"]
+      "types": ["./types"],
+      "business/*": ["./pages/business/*"]
     }
   },
   "include": ["src"],

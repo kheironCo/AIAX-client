@@ -1,8 +1,8 @@
 import { AtomParagraph, AvatarKUI } from 'kheiron-ui';
-import { AvatarStyle } from '../../styles';
+import { AvatarStyle } from './styles';
 import { ProductType } from 'types';
 
-export const ProductResolver = ({ product }: { product: any }) => {
+export const ProductResolver = ({ product }: { product: unknown }) => {
   const __product = product as ProductType;
   return (
     <div css={AvatarStyle}>
