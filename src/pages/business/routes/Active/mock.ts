@@ -1,5 +1,6 @@
 import { faker } from '@faker-js/faker';
-import { ActiveTableData, ProductType, StatusList, TableDetailType, UserType } from './type';
+import { format } from 'date-fns';
+import { ActiveTableData, ProductType, StatusList, TableDetailType, UserType } from 'types';
 
 class MockerData {
   public static createUser(): UserType {
@@ -22,6 +23,12 @@ class MockerData {
       image: faker.image.avatar(),
     };
   }
+  public static createDate(): Date;
+  public static createDate(_format: string): string;
+  public static createDate(_format?: string): string | Date {
+    const date = faker.date.recent({ days: 15 });
+    return _format ? format(date, _format) : date;
+  }
 }
 
 function activeData(): ActiveTableData {
@@ -30,7 +37,7 @@ function activeData(): ActiveTableData {
     details: MockerData.createDetail(),
     seller: MockerData.createUser(),
     product: MockerData.createProduct(),
-    date: new Date(),
+    date: MockerData.createDate('MM-dd-yyy'),
     status: faker.helpers.arrayElement(StatusList),
   };
 }
