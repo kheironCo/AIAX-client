@@ -12,8 +12,8 @@ const tagConfig: Record<StatusType, Pick<Parameters<typeof TagKUI>[0], 'color' |
   },
 };
 
-export const StatusResolver = ({ status }: { status: string }) => {
-  const __status = status as StatusType;
+export const StatusResolver = ({ data }: { data: unknown }) => {
+  const __status = data as StatusType;
 
   return <TagKUI label={__status} {...tagConfig[__status]} />;
 };

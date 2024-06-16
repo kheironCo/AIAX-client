@@ -13,8 +13,8 @@ const Schema = Joi.object({
   dob: Joi.date().optional(),
 });
 
-export const UserResolver = ({ user }: { user: unknown }) => {
-  const { value, error } = Schema.validate(user);
+export const UserResolver = ({ data }: { data: unknown }) => {
+  const { value, error } = Schema.validate(data);
 
   if (error) return <div>{error.message}</div>;
 
