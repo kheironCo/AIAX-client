@@ -28,11 +28,11 @@
     "date-fns": "^3.6.0",
     "emotion": "^11.0.0",
     "graphql": "^16.8.1",
-    "joi": "^17.13.1",
     "kheiron-ui": "^1.0.8",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
-    "react-router-dom": "^6.23.1"
+    "react-router-dom": "^6.23.1",
+    "zod": "^3.23.8"
   },
   "devDependencies": {
     "@faker-js/faker": "^8.4.1",

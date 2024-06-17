@@ -5,8 +5,9 @@ import { UnResolver } from './UnResolver';
 import { UserResolver } from './UserResolver';
 
 type ResolverKeys = 'date' | 'product' | 'client' | 'details' | 'status' | 'seller';
+type ComponentType = (props: { data: unknown }) => JSX.Element;
 
-const TableData: Record<ResolverKeys, (props: { data: unknown }) => JSX.Element> = {
+const TableData: Record<ResolverKeys, ComponentType> = {
   client: UserResolver,
   seller: UserResolver,
   product: ProductResolver,
