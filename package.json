@@ -21,33 +21,33 @@
     ]
   },
   "dependencies": {
-    "@apollo/client": "^3.10.4",
+    "@apollo/client": "^3.10.5",
     "@emotion/css": "^11.11.2",
     "@emotion/react": "^11.11.4",
     "@emotion/styled": "^11.11.5",
     "emotion": "^11.0.0",
-    "graphql": "^16.8.1",
-    "kheiron-ui": "^1.0.7",
+    "graphql": "^16.8.2",
+    "kheiron-ui": "^1.0.8",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
     "react-router-dom": "^6.23.1"
   },
   "devDependencies": {
-    "@types/node": "^20.13.0",
+    "@types/node": "^20.14.2",
     "@types/react": "^18.3.3",
     "@types/react-dom": "^18.3.0",
-    "@typescript-eslint/eslint-plugin": "^7.10.0",
-    "@typescript-eslint/parser": "^7.10.0",
+    "@typescript-eslint/eslint-plugin": "^7.13.0",
+    "@typescript-eslint/parser": "^7.13.0",
     "@vitejs/plugin-react-swc": "^3.7.0",
     "eslint": "^8.57.0",
-    "eslint-plugin-react": "^7.34.1",
+    "eslint-plugin-react": "^7.34.2",
     "eslint-plugin-react-hooks": "^4.6.2",
     "eslint-plugin-react-refresh": "^0.4.7",
     "husky": "^9.0.11",
-    "lint-staged": "^15.2.5",
-    "prettier": "^3.2.5",
+    "lint-staged": "^15.2.7",
+    "prettier": "^3.3.2",
     "typescript": "^5.4.5",
-    "vite": "^5.2.11",
+    "vite": "^5.3.1",
     "vite-tsconfig-paths": "^4.3.2"
   }
 }

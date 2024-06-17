@@ -18,6 +18,10 @@ nav {
 img {
   width: 120px;
 }
+
+.logo:hover {
+  cursor: pointer;
+}
 .btnLogin:hover,
 .btnRegister:hover {
   cursor: pointer;

@@ -4,6 +4,7 @@ import { Home } from './pages/landing/Home';
 import About from './pages/landing/Views/About';
 import BusinessRoute from './pages/business/routes';
 import UserRoute from './pages/dashboard/Home';
+import { Login } from 'pages/Login';
 
 function App() {
   return (
@@ -20,6 +21,7 @@ function App() {
           <Route path="/" element={<Home />} />
           <Route path="/about" element={<About />} />
         </Route>
+        <Route path="/login" element={<Login />} />
         <Route path="/user/*" element={<UserRoute />} />
         <Route path="/business/*" element={<BusinessRoute />} />
       </Routes>
