@@ -3,7 +3,7 @@ import { UserType } from 'types';
 import { UserCardStyle } from './styles';
 
 export const UserResolver = ({ data }: { data: unknown }) => {
-  const __user = value as UserType;
+  const __user = data as UserType;
 
   return (
     <UserProfileCardKUI
