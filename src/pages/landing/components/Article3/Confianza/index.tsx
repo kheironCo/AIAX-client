@@ -1,4 +1,4 @@
-import styles from './styles.module.css';
+import styles from '../styles.module.css';
 import { arregloTypes } from '../types';
 
 export const Confianza = ({ img, titulo, parrafo }: arregloTypes) => {
