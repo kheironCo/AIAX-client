@@ -11,8 +11,10 @@ export const Login = () => {
         <h2 className={styles.h2}>Login</h2>
         <div className={styles.contenedor}>
           <form action="" className={styles.formulario}>
-            <InputFieldTextKUI label="Nombre: "></InputFieldTextKUI>
-            <InputFieldPasswordKUI label="Contraseña:">Contraseña:</InputFieldPasswordKUI>
+            <div className={styles.divisorPadding}>
+              <InputFieldTextKUI label="Nombre: "></InputFieldTextKUI>
+              <InputFieldPasswordKUI label="Contraseña:">Contraseña:</InputFieldPasswordKUI>
+            </div>
             <div className={styles.botones}>
               <ButtonKUI palette="primary">Ingresar</ButtonKUI>
               <ButtonKUI palette="primary">¿Olvidaste tu contraseña?</ButtonKUI>
