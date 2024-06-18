@@ -27,6 +27,7 @@
     "@emotion/styled": "^11.11.5",
     "date-fns": "^3.6.0",
     "emotion": "^11.0.0",
+    "faker": "^6.6.6",
     "graphql": "^16.8.1",
     "kheiron-ui": "^1.0.8",
     "react": "^18.3.1",
