@@ -1,9 +1,14 @@
-import { NavLink } from 'react-router-dom';
+import { NavLink, useNavigate } from 'react-router-dom';
 import logo from 'assets/imgs/logo.svg';
 import styles from './styles.module.css';
 import { ButtonKUI } from 'kheiron-ui';
 
 export const NavBar = () => {
+  let navigate = useNavigate();
+  const irARegister = () => {
+    navigate('/register');
+  };
+
   return (
     <div>
       <nav className={styles.nav}>
@@ -22,7 +27,9 @@ export const NavBar = () => {
           </div>
           <div className={styles.separar}>
             <ButtonKUI palette="gold">Login</ButtonKUI>
-            <ButtonKUI palette="orange">Register</ButtonKUI>
+            <ButtonKUI onClick={irARegister} palette="orange">
+              Register
+            </ButtonKUI>
           </div>
         </div>
       </nav>
