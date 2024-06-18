@@ -26,7 +26,10 @@
     /* Paths */
     "baseUrl": "./src",
     "paths": {
-      "graph": ["./graphql"]
+      "assets": ["./assets"],
+      "graph": ["./graphql"],
+      "types": ["./types"],
+      "business/*": ["./pages/business/*"]
     }
   },
   "include": ["src"],
