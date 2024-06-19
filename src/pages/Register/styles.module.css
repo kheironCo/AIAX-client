@@ -1,11 +1,11 @@
-.padre {
+.container {
   width: 100vw;
   height: 100vh;
 
   display: flex;
   flex-direction: column;
 }
-.juntoform {
+.containerform {
   width: 95vw;
   display: flex;
   align-items: center;
@@ -27,7 +27,7 @@
   padding-right: 70px;
 }
 
-.ordenarInputLineal {
+.inTwoColumns {
   display: flex;
 }
 

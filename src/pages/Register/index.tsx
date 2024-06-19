@@ -1,5 +1,5 @@
 import { NavBar } from 'pages/landing/components';
-import imagenRegister from 'assets/imgs/registerImg.png';
+import Registerimg from 'assets/imgs/registerImg.png';
 import styles from './styles.module.css';
 import { ButtonKUI, InputFieldCheckboxKUI, InputFieldTextKUI } from 'kheiron-ui';
 
@@ -7,25 +7,22 @@ export const Register = () => {
   return (
     <>
       <NavBar />
-      <div className={styles.padre}>
+      <div className={styles.container}>
         <h1 className={styles.h1}>Sign Up</h1>
-        <div className={styles.juntoform}>
-          <img className={styles.img} src={imagenRegister} alt="imagen de registro violeta" />
+        <div className={styles.containerform}>
+          <img className={styles.img} src={Registerimg} alt="Register image" />
           <form className={styles.form}>
-            <div className={styles.ordenarInputLineal}>
-              <InputFieldTextKUI label="Nombre" />
-              <InputFieldTextKUI label="Apellido" />
+            <div className={styles.inTwoColumns}>
+              <InputFieldTextKUI label="Name" />
+              <InputFieldTextKUI label="Last Name" />
             </div>
-            <InputFieldTextKUI label="Razón Social" />
-            <InputFieldTextKUI label="Correo Electrónico" />
-            <InputFieldTextKUI label="Teléfono" />
-            <InputFieldTextKUI label="Contraseña" />
-            <InputFieldTextKUI label="Repite la Contraseña" />
+            <InputFieldTextKUI label="Business name" />
+            <InputFieldTextKUI label="Email" />
+            <InputFieldTextKUI label="Phone" />
+            <InputFieldTextKUI label="Password" />
+            <InputFieldTextKUI label="Repeat password" />
             <br />
-            <InputFieldCheckboxKUI
-              label="Aceptar terminos y condiciones de Kheiron"
-              position="right"
-            >
+            <InputFieldCheckboxKUI label="Accept Kheiron terms and conditions" position="right">
               Checkbox
             </InputFieldCheckboxKUI>
             <br />
