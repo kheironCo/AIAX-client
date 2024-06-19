@@ -25,9 +25,6 @@ importers:
       emotion:
         specifier: ^11.0.0
         version: 11.0.0
-      faker:
-        specifier: ^6.6.6
-        version: 6.6.6
       graphql:
         specifier: ^16.8.2
         version: 16.8.2
@@ -47,9 +44,6 @@ importers:
         specifier: ^3.23.8
         version: 3.23.8
     devDependencies:
-      '@faker-js/faker':
-        specifier: ^8.4.1
-        version: 8.4.1
       '@types/node':
         specifier: ^20.14.2
         version: 20.14.2
@@ -562,13 +556,6 @@ packages:
         integrity: sha512-Ys+3g2TaW7gADOJzPt83SJtCDhMjndcDMFVQ/Tj9iA1BfJzFKD9mAUXT3OenpuPHbI6P/myECxRJrofUsDx/5g==,
       }
     engines: { node: ^12.22.0 || ^14.17.0 || >=16.0.0 }
-
-  '@faker-js/faker@8.4.1':
-    resolution:
-      {
-        integrity: sha512-XQ3cU+Q8Uqmrbf2e0cIC/QN43sTBSC8KF12u29Mb47tWrt2hAgBXSgpZMj4Ao8Uk0iJcU99QsOCaIL8934obCg==,
-      }
-    engines: { node: ^14.17.0 || ^16.13.0 || >=18.0.0, npm: '>=6.14.13' }
 
   '@graphql-typed-document-node/core@3.2.0':
     resolution:
@@ -1381,6 +1368,12 @@ packages:
       }
     engines: { node: '>= 0.4' }
 
+  date-fns@3.6.0:
+    resolution:
+      {
+        integrity: sha512-fRHTG8g/Gif+kSh50gaGEdToemgfj74aRX3swtiouboip5JDLAyDE9F11nHMIcvOaXeOC6D7SpNhi7uFyB7Uww==,
+      }
+
   debug@4.3.5:
     resolution:
       {
@@ -1624,12 +1617,6 @@ packages:
         integrity: sha512-VyhnebXciFV2DESc+p6B+y0LjSm0krU4OgJN44qFAhBY0TJ+1V61tYD2+wHusZ6F9n5K+vl8k0sTy7PEfV4qpg==,
       }
     engines: { node: '>=16.17' }
-
-  faker@6.6.6:
-    resolution:
-      {
-        integrity: sha512-9tCqYEDHI5RYFQigXFwF1hnCwcWCOJl/hmll0lr5D2Ljjb0o4wphb69wikeJDz5qCEzXCoPvG6ss5SDP6IfOdg==,
-      }
 
   fast-deep-equal@3.1.3:
     resolution:
@@ -4019,6 +4006,8 @@ snapshots:
       es-errors: 1.3.0
       is-data-view: 1.0.1
 
+  date-fns@3.6.0: {}
+
   debug@4.3.5:
     dependencies:
       ms: 2.1.2
@@ -4290,8 +4279,6 @@ snapshots:
       onetime: 6.0.0
       signal-exit: 4.1.0
       strip-final-newline: 3.0.0
-
-  faker@6.6.6: {}
 
   fast-deep-equal@3.1.3: {}
 
