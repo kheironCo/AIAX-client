@@ -9,7 +9,7 @@
 .h2 {
   text-align: center;
 }
-.contenedor {
+.container {
   width: 90%;
   height: 60%;
 
@@ -22,7 +22,7 @@
   width: 400px;
   margin-right: 100px;
 }
-.botones {
+.groupButtons {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -31,10 +31,10 @@
   gap: 30px;
 }
 
-.formulario {
+.form {
   margin-left: 200px;
 }
 
-.divisorPadding {
+.padding {
   padding-left: 23px;
 }
