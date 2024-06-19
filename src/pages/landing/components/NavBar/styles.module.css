@@ -18,6 +18,10 @@ nav {
 img {
   width: 120px;
 }
+
+.logo:hover {
+  cursor: pointer;
+}
 .btnLogin:hover,
 .btnRegister:hover {
   cursor: pointer;
@@ -38,23 +42,23 @@ img {
   background-color: #ff6347;
 }
 
-.divDerechaNav {
+.fatherGroupNav {
   width: 56vw;
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
-.divChicoPadre {
+.groupNav {
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
-.divChico {
+.navLinkStyle {
   color: white;
   text-decoration: none;
   padding-right: 40px;
 }
-.separar {
+.groupButtons {
   display: flex;
   gap: 5px;
 }
