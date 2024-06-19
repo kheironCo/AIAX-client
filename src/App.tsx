@@ -5,6 +5,7 @@ import About from './pages/landing/Views/About';
 import BusinessRoute from './pages/business/routes';
 import UserRoute from './pages/dashboard/Home';
 import { Login } from 'pages/Login';
+import { Register } from 'pages/Register';
 
 function App() {
   return (
@@ -23,6 +24,7 @@ function App() {
         </Route>
         <Route path="/login" element={<Login />} />
         <Route path="/user/*" element={<UserRoute />} />
+        <Route path="/register" element={<Register />} />
         <Route path="/business/*" element={<BusinessRoute />} />
       </Routes>
     </>

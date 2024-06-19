@@ -5,12 +5,15 @@ import { ButtonKUI } from 'kheiron-ui';
 
 export const NavBar = () => {
   const navigate = useNavigate();
-  function navegar() {
+  function toggleLogin() {
     navigate('/login');
   }
   function volver() {
     navigate('/');
   }
+  const toggleRegister = () => {
+    navigate('/register');
+  };
 
   return (
     <div>
@@ -29,10 +32,12 @@ export const NavBar = () => {
             </NavLink>
           </div>
           <div className={styles.groupButtons}>
-            <ButtonKUI palette="gold" onClick={navegar}>
+            <ButtonKUI palette="gold" onClick={toggleLogin}>
               Login
             </ButtonKUI>
-            <ButtonKUI palette="orange">Register</ButtonKUI>
+            <ButtonKUI palette="orange" onClick={toggleRegister}>
+              Register
+            </ButtonKUI>
           </div>
         </div>
       </nav>
