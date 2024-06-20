@@ -1,0 +1,36 @@
+.container {
+  width: 100vw;
+  height: 100vh;
+
+  display: flex;
+  flex-direction: column;
+}
+.containerform {
+  width: 95vw;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.img {
+  width: 400px;
+  padding-left: 170px;
+}
+.h1 {
+  padding-top: 80px;
+  padding-bottom: 30px;
+  text-align: center;
+  background: linear-gradient(to right, #583d6b, #a875cd);
+  -webkit-background-clip: text;
+  color: transparent;
+}
+.form {
+  padding-right: 70px;
+}
+
+.inTwoColumns {
+  display: flex;
+}
+
+.button {
+  text-align: center;
+}
