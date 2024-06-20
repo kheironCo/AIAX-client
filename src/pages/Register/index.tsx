@@ -13,7 +13,7 @@ import { UserRegister } from 'schema/User';
 
 export const Register = () => {
   const {
-    register: r,
+    register,
     handleSubmit,
     formState: { errors },
   } = useForm({ resolver: zodResolver(UserRegister) });
@@ -27,22 +27,22 @@ export const Register = () => {
           <img className={styles.img} src={Registerimg} alt="Register image" />
           <form className={styles.form} onSubmit={handleSubmit((data) => console.log(data))}>
             <div className={styles.inTwoColumns}>
-              <InputFieldTextKUI {...r('name')} label="Name" />
-              <InputFieldTextKUI {...r('lastName')} label="Last Name" />
+              <InputFieldTextKUI {...register('name')} label="Name" />
+              <InputFieldTextKUI {...register('lastName')} label="Last Name" />
             </div>
             {JSON.stringify(errors)}
-            <InputFieldTextKUI {...r('businessName')} label="Business name" />
-            <InputFieldTextKUI {...r('email')} label="Email" />
-            <InputFieldTextKUI {...r('phone')} label="Phone" />
-            <InputFieldPasswordKUI {...r('password')} label="Password">
+            <InputFieldTextKUI {...register('businessName')} label="Business name" />
+            <InputFieldTextKUI {...register('email')} label="Email" />
+            <InputFieldTextKUI {...register('phone')} label="Phone" />
+            <InputFieldPasswordKUI {...register('password')} label="Password">
               pass
             </InputFieldPasswordKUI>
-            <InputFieldPasswordKUI {...r('repeatPassword')} label="Repeat password">
+            <InputFieldPasswordKUI {...register('repeatPassword')} label="Repeat password">
               pass
             </InputFieldPasswordKUI>
             <br />
             <InputFieldCheckboxKUI
-              {...r('terms')}
+              {...register('terms')}
               label="Accept Kheiron terms and conditions"
               position="right"
             >
