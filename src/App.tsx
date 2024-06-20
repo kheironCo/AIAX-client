@@ -4,6 +4,7 @@ import { Home } from './pages/landing/Home';
 import About from './pages/landing/Views/About';
 import BusinessRoute from './pages/business/routes';
 import UserRoute from './pages/dashboard/Home';
+import { Register } from 'pages/Register';
 import { Login } from 'pages/Login';
 
 function App() {
@@ -23,6 +24,7 @@ function App() {
         </Route>
         <Route path="/login" element={<Login />} />
         <Route path="/user/*" element={<UserRoute />} />
+        <Route path="/register" element={<Register />} />
         <Route path="/business/*" element={<BusinessRoute />} />
       </Routes>
     </>
