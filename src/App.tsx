@@ -6,6 +6,7 @@ import BusinessRoute from './pages/business/routes';
 import UserRoute from './pages/dashboard/Home';
 import { Register } from 'pages/Register';
 import { Login } from 'pages/Login';
+import { Experiment } from 'pages/Experiment';
 
 function App() {
   return (
@@ -26,6 +27,7 @@ function App() {
         <Route path="/user/*" element={<UserRoute />} />
         <Route path="/register" element={<Register />} />
         <Route path="/business/*" element={<BusinessRoute />} />
+        <Route path="/experiment" element={<Experiment />} />
       </Routes>
     </>
   );
