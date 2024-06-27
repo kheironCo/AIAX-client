@@ -13,7 +13,7 @@ export const Login = () => {
           <form className={styles.form}>
             <div className={styles.padding}>
               <InputFieldTextKUI label="Name: "></InputFieldTextKUI>
-              <InputFieldPasswordKUI label="Password:">Contraseña:</InputFieldPasswordKUI>
+              <InputFieldPasswordKUI label="Password:"></InputFieldPasswordKUI>
             </div>
             <div className={styles.groupButtons}>
               <ButtonKUI palette="primary">Login</ButtonKUI>

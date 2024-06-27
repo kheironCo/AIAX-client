@@ -24,9 +24,11 @@
   color: transparent;
 }
 .form {
-  padding-right: 70px;
+  padding-right: 50px;
 }
-
+.organizarCheck {
+  padding-right: 50px;
+}
 .inTwoColumns {
   display: flex;
 }
