@@ -8,6 +8,7 @@
 }
 .h2 {
   text-align: center;
+  padding-right: 33px;
 }
 .container {
   width: 90%;
@@ -32,9 +33,5 @@
 }
 
 .form {
-  margin-left: 200px;
-}
-
-.padding {
-  padding-left: 23px;
+  margin-left: 250px;
 }
