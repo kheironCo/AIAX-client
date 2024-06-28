@@ -1,7 +1,12 @@
 import { NavBar } from 'pages/landing/components';
 import Registerimg from 'assets/imgs/registerImg.png';
 import styles from './styles.module.css';
-import { ButtonKUI, InputFieldCheckboxKUI, InputFieldTextKUI } from 'kheiron-ui';
+import {
+  ButtonKUI,
+  InputFieldCheckboxKUI,
+  InputFieldPasswordKUI,
+  InputFieldTextKUI,
+} from 'kheiron-ui';
 
 export const Register = () => {
   return (
@@ -16,15 +21,17 @@ export const Register = () => {
               <InputFieldTextKUI label="Name" />
               <InputFieldTextKUI label="Last Name" />
             </div>
-            <InputFieldTextKUI label="Business name" />
-            <InputFieldTextKUI label="Email" />
-            <InputFieldTextKUI label="Phone" />
-            <InputFieldTextKUI label="Password" />
-            <InputFieldTextKUI label="Repeat password" />
+            <InputFieldTextKUI label="Business name" width="361px" />
+            <InputFieldTextKUI label="Email" width="361px" />
+            <InputFieldTextKUI label="Phone" width="361px" />
+            <InputFieldPasswordKUI label="Password" width="337px" />
+            <InputFieldPasswordKUI label="Repeat password" width="337px" />
             <br />
-            <InputFieldCheckboxKUI label="Accept Kheiron terms and conditions" position="right">
-              Checkbox
-            </InputFieldCheckboxKUI>
+            <div className={styles.organizarCheck}>
+              <InputFieldCheckboxKUI label="Accept Kheiron terms and conditions" position="right">
+                Checkbox
+              </InputFieldCheckboxKUI>
+            </div>
             <br />
             <div className={styles.button}>
               <ButtonKUI palette="gold">Crear cuenta</ButtonKUI>

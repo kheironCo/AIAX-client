@@ -11,9 +11,9 @@ export const Login = () => {
         <h2 className={styles.h2}>Login</h2>
         <div className={styles.container}>
           <form className={styles.form}>
-            <div className={styles.padding}>
-              <InputFieldTextKUI label="Name: "></InputFieldTextKUI>
-              <InputFieldPasswordKUI label="Password:">Contraseña:</InputFieldPasswordKUI>
+            <div>
+              <InputFieldTextKUI label="Name: " width="230px"></InputFieldTextKUI>
+              <InputFieldPasswordKUI label="Password:" width="204px"></InputFieldPasswordKUI>
             </div>
             <div className={styles.groupButtons}>
               <ButtonKUI palette="primary">Login</ButtonKUI>
@@ -22,6 +22,7 @@ export const Login = () => {
           </form>
           <img src={keyimg} alt="Imagen de llave" className={styles.imagen} />
         </div>
+
         <ButtonKUI palette="gold">Create new account</ButtonKUI>
       </div>
     </>
