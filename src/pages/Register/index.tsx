@@ -7,7 +7,7 @@ import {
   InputFieldPasswordKUI,
   InputFieldTextKUI,
 } from 'kheiron-ui';
-import { useState } from 'react';
+import { ChangeEvent, useState } from 'react';
 import { register } from '../../config/firebase.js';
 import { useNavigate } from 'react-router-dom';
 
@@ -23,7 +23,7 @@ export const Register = () => {
   });
   const { name, lastName, bussines, email, phone, password, repeatPassword } = user;
 
-  function handleChangeregister(e: any) {
+  function handleChangeregister(e: ChangeEvent<HTMLInputElement>): void {
     setUser({
       ...user,
       [e.target.name]: e.target.value,

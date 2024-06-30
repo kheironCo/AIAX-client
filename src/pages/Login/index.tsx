@@ -2,7 +2,7 @@ import { NavBar } from 'pages/landing/components';
 import styles from './style.module.css';
 import { ButtonKUI, InputFieldPasswordKUI, InputFieldTextKUI } from 'kheiron-ui';
 import keyimg from 'assets/imgs/imagenLlave.png';
-import { useState } from 'react';
+import { FormEvent, useState } from 'react';
 import { login } from '../../config/firebase.js';
 import { useNavigate } from 'react-router-dom';
 
@@ -11,7 +11,7 @@ export const Login = () => {
   const [password, setPassword] = useState('');
 
   const navigate = useNavigate();
-  const handleSubmitLogin = async (e: any) => {
+  const handleSubmitLogin = async (e: FormEvent): Promise<void> => {
     e.preventDefault();
     try {
       const credencialUser = await login({ email, password });
