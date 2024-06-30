@@ -31,23 +31,25 @@ export const Register = () => {
               <InputFieldTextKUI {...register('lastName')} label="Last Name" />
             </div>
             {JSON.stringify(errors)}
-            <InputFieldTextKUI {...register('businessName')} label="Business name" />
-            <InputFieldTextKUI {...register('email')} label="Email" />
-            <InputFieldTextKUI {...register('phone')} label="Phone" />
-            <InputFieldPasswordKUI {...register('password')} label="Password">
-              pass
-            </InputFieldPasswordKUI>
-            <InputFieldPasswordKUI {...register('repeatPassword')} label="Repeat password">
-              pass
-            </InputFieldPasswordKUI>
+            <InputFieldTextKUI {...register('businessName')} label="Business name" width="361px" />
+            <InputFieldTextKUI {...register('email')} label="Email" width="361px" />
+            <InputFieldTextKUI {...register('phone')} label="Phone" width="361px" />
+            <InputFieldPasswordKUI {...register('password')} label="Password" width="337px" />
+            <InputFieldPasswordKUI
+              {...register('repeatPassword')}
+              label="Repeat password"
+              width="337px"
+            />
             <br />
-            <InputFieldCheckboxKUI
-              {...register('terms')}
-              label="Accept Kheiron terms and conditions"
-              position="right"
-            >
-              Checkbox
-            </InputFieldCheckboxKUI>
+            <div className={styles.organizarCheck}>
+              <InputFieldCheckboxKUI
+                {...register('terms')}
+                label="Accept Kheiron terms and conditions"
+                position="right"
+              >
+                Checkbox
+              </InputFieldCheckboxKUI>
+            </div>
             <br />
             <div className={styles.button}>
               <ButtonKUI type="submit" onClick={() => console.log(errors)} palette="gold">

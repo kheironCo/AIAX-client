@@ -4,8 +4,8 @@ import { Home } from './pages/landing/Home';
 import About from './pages/landing/Views/About';
 import BusinessRoute from './pages/business/routes';
 import UserRoute from './pages/dashboard/Home';
-import { Register } from 'pages/Register';
 import { Login } from 'pages/Login';
+import { Register } from 'pages/Register';
 
 function App() {
   return (

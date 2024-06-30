@@ -5,20 +5,20 @@ import { ButtonKUI } from 'kheiron-ui';
 
 export const NavBar = () => {
   const navigate = useNavigate();
-  function handleButtonLogin() {
+  function toggleLogin() {
     navigate('/login');
   }
-  function handleClickLogo() {
+  function volver() {
     navigate('/');
   }
-  const handleButtonSignUp = () => {
+  const toggleRegister = () => {
     navigate('/register');
   };
 
   return (
     <div>
       <nav className={styles.nav}>
-        <img src={logo} alt="logo" onClick={handleClickLogo} className={styles.logo} />
+        <img src={logo} alt="logo" onClick={volver} className={styles.logo} />
         <div className={styles.fatherGroupNav}>
           <div className={styles.groupNav}>
             <NavLink to="/contacto" className={styles.navLinkStyle}>
@@ -32,10 +32,10 @@ export const NavBar = () => {
             </NavLink>
           </div>
           <div className={styles.groupButtons}>
-            <ButtonKUI palette="gold" onClick={handleButtonLogin}>
+            <ButtonKUI palette="gold" onClick={toggleLogin}>
               Login
             </ButtonKUI>
-            <ButtonKUI onClick={handleButtonSignUp} palette="orange">
+            <ButtonKUI palette="orange" onClick={toggleRegister}>
               Register
             </ButtonKUI>
           </div>
