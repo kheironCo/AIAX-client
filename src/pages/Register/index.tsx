@@ -1,5 +1,5 @@
 import { NavBar } from 'pages/landing/components';
-import Registerimg from 'assets/imgs/registerImg.png';
+import ImageRegister from 'assets/imgs/registerImg.png';
 import styles from './styles.module.css';
 import {
   ButtonKUI,
@@ -7,34 +7,64 @@ import {
   InputFieldPasswordKUI,
   InputFieldTextKUI,
 } from 'kheiron-ui';
+import { useForm } from 'react-hook-form';
+import { zodResolver } from '@hookform/resolvers/zod';
+import { UserRegister, IUserRegister } from 'schema/User';
 
 export const Register = () => {
+  const {
+    register,
+    handleSubmit,
+    formState: { errors },
+  } = useForm<IUserRegister>({ resolver: zodResolver(UserRegister) });
+
+  const handleValidSubmit = (data: IUserRegister) => {
+    console.log(data);
+  };
+
   return (
     <>
       <NavBar />
       <div className={styles.container}>
         <h1 className={styles.h1}>Sign Up</h1>
         <div className={styles.containerform}>
-          <img className={styles.img} src={Registerimg} alt="Register image" />
-          <form className={styles.form}>
+          <img className={styles.img} src={ImageRegister} alt="Register image" />
+          <form className={styles.form} onSubmit={handleSubmit(handleValidSubmit)}>
             <div className={styles.inTwoColumns}>
-              <InputFieldTextKUI label="Name" />
-              <InputFieldTextKUI label="Last Name" />
+              <InputFieldTextKUI width="100%" {...register('name')} label="Name" />
+              <InputFieldTextKUI width="100%" {...register('lastName')} label="Last Name" />
             </div>
-            <InputFieldTextKUI label="Business name" width="361px" />
-            <InputFieldTextKUI label="Email" width="361px" />
-            <InputFieldTextKUI label="Phone" width="361px" />
-            <InputFieldPasswordKUI label="Password" width="337px" />
-            <InputFieldPasswordKUI label="Repeat password" width="337px" />
+            {errors.name?.message && <h6 className={styles.error}>{`${errors.name.message}`}</h6>}
+            <InputFieldTextKUI {...register('businessName')} label="Business name" width="100%" />
+            {errors.businessName?.message && (
+              <h6 className={styles.error}>{`${errors.businessName.message}`}</h6>
+            )}
+            <InputFieldTextKUI {...register('email')} label="Email" width="100%" />
+            {errors.email?.message && <h6 className={styles.error}>{`${errors.email.message}`}</h6>}
+            <InputFieldTextKUI {...register('phone')} label="Phone" width="100%" />
+            {errors.phone?.message && <h6 className={styles.error}>{`${errors.phone.message}`}</h6>}
+            <InputFieldPasswordKUI {...register('password')} label="Password" width="100%" />
+            {errors.password?.message && (
+              <h6 className={styles.error}>{`${errors.password.message}`}</h6>
+            )}
+            <InputFieldPasswordKUI
+              {...register('repeatPassword')}
+              label="Repeat password"
+              width="100%"
+            />
+            {errors.repeatPassword?.message && (
+              <h6 className={styles.error}>{`${errors.repeatPassword.message}`}</h6>
+            )}
             <br />
-            <div className={styles.organizarCheck}>
-              <InputFieldCheckboxKUI label="Accept Kheiron terms and conditions" position="right">
-                Checkbox
-              </InputFieldCheckboxKUI>
-            </div>
+            <InputFieldCheckboxKUI
+              {...register('terms')}
+              label="Accept Kheiron terms and conditions"
+              position="right"
+            />
+            {errors.terms?.message && <h6 className={styles.error}>{`${errors.terms.message}`}</h6>}
             <br />
             <div className={styles.button}>
-              <ButtonKUI palette="gold">Crear cuenta</ButtonKUI>
+              <ButtonKUI type="submit" palette="gold" label="Crear cuenta" />
             </div>
           </form>
         </div>

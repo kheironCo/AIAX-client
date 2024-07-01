@@ -1,4 +1,4 @@
-import { AtomHeading as Heading } from 'kheiron-ui';
+import { Heading } from 'kheiron-ui';
 import { Route, Routes } from 'react-router-dom';
 import Home from '../Home';
 import Active from './Active';
