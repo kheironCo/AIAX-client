@@ -19,6 +19,9 @@ importers:
       '@emotion/styled':
         specifier: ^11.11.5
         version: 11.11.5(@emotion/react@11.11.4(@types/react@18.3.3)(react@18.3.1))(@types/react@18.3.3)(react@18.3.1)
+      '@faker-js/faker':
+        specifier: ^8.4.1
+        version: 8.4.1
       '@hookform/resolvers':
         specifier: ^3.6.0
         version: 3.6.0(react-hook-form@7.52.0(react@18.3.1))
@@ -32,8 +35,8 @@ importers:
         specifier: ^16.8.2
         version: 16.8.2
       kheiron-ui:
-        specifier: ^1.0.9
-        version: 1.0.9(@types/react@18.3.3)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
+        specifier: ^1.1.0
+        version: 1.1.0(@types/react@18.3.3)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
       react:
         specifier: ^18.3.1
         version: 18.3.1
@@ -562,6 +565,13 @@ packages:
         integrity: sha512-Ys+3g2TaW7gADOJzPt83SJtCDhMjndcDMFVQ/Tj9iA1BfJzFKD9mAUXT3OenpuPHbI6P/myECxRJrofUsDx/5g==,
       }
     engines: { node: ^12.22.0 || ^14.17.0 || >=16.0.0 }
+
+  '@faker-js/faker@8.4.1':
+    resolution:
+      {
+        integrity: sha512-XQ3cU+Q8Uqmrbf2e0cIC/QN43sTBSC8KF12u29Mb47tWrt2hAgBXSgpZMj4Ao8Uk0iJcU99QsOCaIL8934obCg==,
+      }
+    engines: { node: ^14.17.0 || ^16.13.0 || >=18.0.0, npm: '>=6.14.13' }
 
   '@graphql-typed-document-node/core@3.2.0':
     resolution:
@@ -2275,10 +2285,10 @@ packages:
         integrity: sha512-oxVHkHR/EJf2CNXnWxRLW6mg7JyCCUcG0DtEGmL2ctUo1PNTin1PUil+r/+4r5MpVgC/fn1kjsx7mjSujKqIpw==,
       }
 
-  kheiron-ui@1.0.9:
+  kheiron-ui@1.1.0:
     resolution:
       {
-        integrity: sha512-AHvMJWX5C8zeZTh6dLMRo9CIqJjoG8eFPO/1AhSrfVAb6Lcbe5sL5D5o08l+OjYP4sXWIqc1r24OA3Cf21zvQg==,
+        integrity: sha512-+QBUT4I8ykfTNEQ0ACfBOBXdGY4yAEs7zKTCIaritx4z4ymHoIYzWZFz2v+E1bTcABliUAYd0KU0L2Ztbc8i9g==,
       }
     engines: { node: '>=18.18.0' }
     peerDependencies:
@@ -3613,6 +3623,8 @@ snapshots:
 
   '@eslint/js@8.57.0': {}
 
+  '@faker-js/faker@8.4.1': {}
+
   '@graphql-typed-document-node/core@3.2.0(graphql@16.8.2)':
     dependencies:
       graphql: 16.8.2
@@ -4710,7 +4722,7 @@ snapshots:
     dependencies:
       json-buffer: 3.0.1
 
-  kheiron-ui@1.0.9(@types/react@18.3.3)(react-dom@18.3.1(react@18.3.1))(react@18.3.1):
+  kheiron-ui@1.1.0(@types/react@18.3.3)(react-dom@18.3.1(react@18.3.1))(react@18.3.1):
     dependencies:
       '@emotion/react': 11.11.4(@types/react@18.3.3)(react@18.3.1)
       '@emotion/styled': 11.11.5(@emotion/react@11.11.4(@types/react@18.3.3)(react@18.3.1))(@types/react@18.3.3)(react@18.3.1)
