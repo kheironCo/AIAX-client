@@ -1,4 +1,5 @@
 import { NavBar } from 'pages/landing/components';
+import ImageRegister from 'assets/imgs/registerImg.png';
 import styles from './styles.module.css';
 import {
   ButtonKUI,
@@ -6,45 +7,34 @@ import {
   InputFieldPasswordKUI,
   InputFieldTextKUI,
 } from 'kheiron-ui';
-import { ChangeEvent, useState } from 'react';
-import { registerNew } from '../../config/firebase.js';
-
-import { useNavigate } from 'react-router-dom';
-import Registerimg from '../../assets/imgs/registerImg.png';
 import { useForm } from 'react-hook-form';
 import { zodResolver } from '@hookform/resolvers/zod';
 import { UserRegister, IUserRegister } from 'schema/User';
+import { ChangeEvent, useState } from 'react';
+import { registerNew } from '../../config/firebase.js';
+import { useNavigate } from 'react-router-dom';
 import { any } from 'zod';
 
 export const Register = () => {
   const [user, setUser] = useState({
     name: '',
     lastName: '',
-    bussines: '',
+    bussinesName: '',
     email: '',
     phone: '',
     password: '',
     repeatPassword: '',
+    terms: true,
   });
 
   const {
     register,
+    handleSubmit,
     formState: { errors },
   } = useForm<IUserRegister>({ resolver: zodResolver(UserRegister) });
 
-  const { name, lastName, bussines, email, phone, password, repeatPassword } = user;
-
-  function handleChangeRegister(e: ChangeEvent<HTMLInputElement>): void {
-    setUser({
-      ...user,
-      [e.target.name]: e.target.value,
-    });
-  }
-
-  const navigate = useNavigate();
-
-  const handleSubmitRegister = async (e: any) => {
-    e.preventDefault();
+  const handleValidSubmit = async (data: IUserRegister) => {
+    console.log(data);
     try {
       const credencialUser = await registerNew({ email, password });
 
@@ -58,15 +48,26 @@ export const Register = () => {
     }
   };
 
+  const { name, lastName, bussinesName, email, phone, password, repeatPassword, terms } = user;
+
+  function handleChangeRegister(e: ChangeEvent<HTMLInputElement>): void {
+    setUser({
+      ...user,
+      [e.target.name]: e.target.value,
+    });
+  }
+
+  const navigate = useNavigate();
+
   return (
     <>
       <NavBar />
       <div className={styles.container}>
         <h1 className={styles.h1}>Sign Up</h1>
-        <div className={styles.org}>
-          <img className={styles.img} src={Registerimg} alt="Register image" />
-          <form className={styles.form} onSubmit={handleSubmitRegister}>
-            <div className={styles.containerform}>
+        <div className={styles.containerform}>
+          <img className={styles.img} src={ImageRegister} alt="Register image" />
+          <form className={styles.form} onSubmit={handleSubmit(handleValidSubmit)}>
+            <div className={styles.inTwoColumns}>
               <InputFieldTextKUI
                 width="100%"
                 {...register('name')}
@@ -89,8 +90,8 @@ export const Register = () => {
               {...register('businessName')}
               label="Business name"
               width="100%"
-              name="bussines"
-              value={bussines}
+              name="bussinesName"
+              value={bussinesName}
               onChange={handleChangeRegister}
             />
             {errors.businessName?.message && (
@@ -137,7 +138,11 @@ export const Register = () => {
               <h6 className={styles.error}>{`${errors.repeatPassword.message}`}</h6>
             )}
             <br />
-            <InputFieldCheckboxKUI label="Accept Kheiron terms and conditions" position="right" />
+            <InputFieldCheckboxKUI
+              {...register('terms')}
+              label="Accept Kheiron terms and conditions"
+              position="right"
+            />
             {errors.terms?.message && <h6 className={styles.error}>{`${errors.terms.message}`}</h6>}
             <br />
             <div className={styles.button}>
