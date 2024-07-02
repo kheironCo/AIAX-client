@@ -10,6 +10,8 @@ import {
 import { useForm } from 'react-hook-form';
 import { zodResolver } from '@hookform/resolvers/zod';
 import { UserRegister, IUserRegister } from 'schema/User';
+import { registerNew } from '../../config/firebase.js';
+import { useNavigate } from 'react-router-dom';
 
 export const Register = () => {
   const {
@@ -18,9 +20,22 @@ export const Register = () => {
     formState: { errors },
   } = useForm<IUserRegister>({ resolver: zodResolver(UserRegister) });
 
-  const handleValidSubmit = (data: IUserRegister) => {
-    console.log(data);
+  const handleValidSubmit = async (data: IUserRegister) => {
+    const { email, password } = data;
+    try {
+      const credencialUser = await registerNew({ email, password });
+
+      if (credencialUser.operationType == 'signIn') {
+        alert('Ha Registrado su cuenta!');
+        navigate('/dashboard');
+      }
+    } catch (error) {
+      console.log(error);
+      alert('Error al crear cuenta');
+    }
   };
+
+  const navigate = useNavigate();
 
   return (
     <>
