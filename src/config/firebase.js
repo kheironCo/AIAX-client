@@ -17,6 +17,6 @@ export const auth = getAuth(app);
 export const login = ({ email, password }) => {
   return signInWithEmailAndPassword(auth, email, password);
 };
-export const register = ({ email, password }) => {
+export const registerNew = ({ email, password }) => {
   return createUserWithEmailAndPassword(auth, email, password);
 };

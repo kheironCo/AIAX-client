@@ -1,5 +1,4 @@
 import { NavBar } from 'pages/landing/components';
-import Registerimg from 'assets/imgs/registerImg.png';
 import styles from './styles.module.css';
 import {
   ButtonKUI,
@@ -8,8 +7,14 @@ import {
   InputFieldTextKUI,
 } from 'kheiron-ui';
 import { ChangeEvent, useState } from 'react';
-import { register } from '../../config/firebase.js';
+import { registerNew } from '../../config/firebase.js';
+
 import { useNavigate } from 'react-router-dom';
+import Registerimg from '../../assets/imgs/registerImg.png';
+import { useForm } from 'react-hook-form';
+import { zodResolver } from '@hookform/resolvers/zod';
+import { UserRegister, IUserRegister } from 'schema/User';
+import { any } from 'zod';
 
 export const Register = () => {
   const [user, setUser] = useState({
@@ -21,9 +26,15 @@ export const Register = () => {
     password: '',
     repeatPassword: '',
   });
+
+  const {
+    register,
+    formState: { errors },
+  } = useForm<IUserRegister>({ resolver: zodResolver(UserRegister) });
+
   const { name, lastName, bussines, email, phone, password, repeatPassword } = user;
 
-  function handleChangeregister(e: ChangeEvent<HTMLInputElement>): void {
+  function handleChangeRegister(e: ChangeEvent<HTMLInputElement>): void {
     setUser({
       ...user,
       [e.target.name]: e.target.value,
@@ -35,8 +46,8 @@ export const Register = () => {
   const handleSubmitRegister = async (e: any) => {
     e.preventDefault();
     try {
-      const credencialUser = await register({ email, password });
-      console.log(credencialUser);
+      const credencialUser = await registerNew({ email, password });
+
       if (credencialUser.operationType == 'signIn') {
         alert('Ha Registrado su cuenta!');
         navigate('/dashboard');
@@ -52,67 +63,85 @@ export const Register = () => {
       <NavBar />
       <div className={styles.container}>
         <h1 className={styles.h1}>Sign Up</h1>
-        <div className={styles.containerform}>
+        <div className={styles.org}>
           <img className={styles.img} src={Registerimg} alt="Register image" />
           <form className={styles.form} onSubmit={handleSubmitRegister}>
-            <div className={styles.inTwoColumns}>
+            <div className={styles.containerform}>
               <InputFieldTextKUI
+                width="100%"
+                {...register('name')}
                 label="Name"
                 name="name"
                 value={name}
-                onChange={handleChangeregister}
+                onChange={handleChangeRegister}
               />
               <InputFieldTextKUI
+                width="100%"
+                {...register('lastName')}
                 label="Last Name"
                 name="lastName"
                 value={lastName}
-                onChange={handleChangeregister}
+                onChange={handleChangeRegister}
               />
             </div>
+            {errors.name?.message && <h6 className={styles.error}>{`${errors.name.message}`}</h6>}
             <InputFieldTextKUI
+              {...register('businessName')}
               label="Business name"
-              width="361px"
+              width="100%"
               name="bussines"
               value={bussines}
-              onChange={handleChangeregister}
+              onChange={handleChangeRegister}
             />
+            {errors.businessName?.message && (
+              <h6 className={styles.error}>{`${errors.businessName.message}`}</h6>
+            )}
             <InputFieldTextKUI
+              {...register('email')}
               label="Email"
-              value={email}
-              width="361px"
+              width="100%"
               name="email"
-              onChange={handleChangeregister}
+              value={email}
+              onChange={handleChangeRegister}
             />
+            {errors.email?.message && <h6 className={styles.error}>{`${errors.email.message}`}</h6>}
             <InputFieldTextKUI
+              {...register('phone')}
               label="Phone"
-              width="361px"
+              width="100%"
               name="phone"
               value={phone}
-              onChange={handleChangeregister}
+              onChange={handleChangeRegister}
             />
+            {errors.phone?.message && <h6 className={styles.error}>{`${errors.phone.message}`}</h6>}
             <InputFieldPasswordKUI
+              {...register('password')}
               label="Password"
-              value={password}
-              width="337px"
+              width="100%"
               name="password"
-              onChange={handleChangeregister}
+              value={password}
+              onChange={handleChangeRegister}
             />
+            {errors.password?.message && (
+              <h6 className={styles.error}>{`${errors.password.message}`}</h6>
+            )}
             <InputFieldPasswordKUI
+              {...register('repeatPassword')}
               label="Repeat password"
-              width="337px"
-              value={repeatPassword}
+              width="100%"
               name="repeatPassword"
-              onChange={handleChangeregister}
+              value={repeatPassword}
+              onChange={handleChangeRegister}
             />
+            {errors.repeatPassword?.message && (
+              <h6 className={styles.error}>{`${errors.repeatPassword.message}`}</h6>
+            )}
             <br />
-            <div className={styles.organizarCheck}>
-              <InputFieldCheckboxKUI label="Accept Kheiron terms and conditions" position="right">
-                Checkbox
-              </InputFieldCheckboxKUI>
-            </div>
+            <InputFieldCheckboxKUI label="Accept Kheiron terms and conditions" position="right" />
+            {errors.terms?.message && <h6 className={styles.error}>{`${errors.terms.message}`}</h6>}
             <br />
             <div className={styles.button}>
-              <ButtonKUI palette="gold">Crear cuenta</ButtonKUI>
+              <ButtonKUI type="submit" palette="gold" label="Crear cuenta" />
             </div>
           </form>
         </div>

@@ -22,6 +22,9 @@ importers:
       '@faker-js/faker':
         specifier: ^8.4.1
         version: 8.4.1
+      '@hookform/resolvers':
+        specifier: ^3.6.0
+        version: 3.6.0(react-hook-form@7.52.0(react@18.3.1))
       date-fns:
         specifier: ^3.6.0
         version: 3.6.0
@@ -35,14 +38,17 @@ importers:
         specifier: ^16.8.2
         version: 16.8.2
       kheiron-ui:
-        specifier: ^1.0.9
-        version: 1.0.9(@types/react@18.3.3)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
+        specifier: ^1.1.0
+        version: 1.1.0(@types/react@18.3.3)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
       react:
         specifier: ^18.3.1
         version: 18.3.1
       react-dom:
         specifier: ^18.3.1
         version: 18.3.1(react@18.3.1)
+      react-hook-form:
+        specifier: ^7.52.0
+        version: 7.52.0(react@18.3.1)
       react-router-dom:
         specifier: ^6.23.1
         version: 6.23.1(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
@@ -917,6 +923,14 @@ packages:
       }
     engines: { node: '>=6' }
     hasBin: true
+
+  '@hookform/resolvers@3.6.0':
+    resolution:
+      {
+        integrity: sha512-UBcpyOX3+RR+dNnqBd0lchXpoL8p4xC21XP8H6Meb8uve5Br1GCnmg0PcBoKKqPKgGu9GHQ/oygcmPrQhetwqw==,
+      }
+    peerDependencies:
+      react-hook-form: ^7.0.0
 
   '@humanwhocodes/config-array@0.11.14':
     resolution:
@@ -2733,10 +2747,10 @@ packages:
         integrity: sha512-oxVHkHR/EJf2CNXnWxRLW6mg7JyCCUcG0DtEGmL2ctUo1PNTin1PUil+r/+4r5MpVgC/fn1kjsx7mjSujKqIpw==,
       }
 
-  kheiron-ui@1.0.9:
+  kheiron-ui@1.1.0:
     resolution:
       {
-        integrity: sha512-AHvMJWX5C8zeZTh6dLMRo9CIqJjoG8eFPO/1AhSrfVAb6Lcbe5sL5D5o08l+OjYP4sXWIqc1r24OA3Cf21zvQg==,
+        integrity: sha512-+QBUT4I8ykfTNEQ0ACfBOBXdGY4yAEs7zKTCIaritx4z4ymHoIYzWZFz2v+E1bTcABliUAYd0KU0L2Ztbc8i9g==,
       }
     engines: { node: '>=18.18.0' }
     peerDependencies:
@@ -3136,6 +3150,15 @@ packages:
       }
     peerDependencies:
       react: ^18.3.1
+
+  react-hook-form@7.52.0:
+    resolution:
+      {
+        integrity: sha512-mJX506Xc6mirzLsmXUJyqlAI3Kj9Ph2RhplYhUVffeOQSnubK2uVqBFOBJmvKikvbFV91pxVXmDiR+QMF19x6A==,
+      }
+    engines: { node: '>=12.22.0' }
+    peerDependencies:
+      react: ^16.8.0 || ^17 || ^18 || ^19
 
   react-icons@5.2.1:
     resolution:
@@ -4483,6 +4506,10 @@ snapshots:
       protobufjs: 7.3.2
       yargs: 17.7.2
 
+  '@hookform/resolvers@3.6.0(react-hook-form@7.52.0(react@18.3.1))':
+    dependencies:
+      react-hook-form: 7.52.0(react@18.3.1)
+
   '@humanwhocodes/config-array@0.11.14':
     dependencies:
       '@humanwhocodes/object-schema': 2.0.3
@@ -5649,7 +5676,7 @@ snapshots:
     dependencies:
       json-buffer: 3.0.1
 
-  kheiron-ui@1.0.9(@types/react@18.3.3)(react-dom@18.3.1(react@18.3.1))(react@18.3.1):
+  kheiron-ui@1.1.0(@types/react@18.3.3)(react-dom@18.3.1(react@18.3.1))(react@18.3.1):
     dependencies:
       '@emotion/react': 11.11.4(@types/react@18.3.3)(react@18.3.1)
       '@emotion/styled': 11.11.5(@emotion/react@11.11.4(@types/react@18.3.3)(react@18.3.1))(@types/react@18.3.3)(react@18.3.1)
@@ -5894,6 +5921,10 @@ snapshots:
       loose-envify: 1.4.0
       react: 18.3.1
       scheduler: 0.23.2
+
+  react-hook-form@7.52.0(react@18.3.1):
+    dependencies:
+      react: 18.3.1
 
   react-icons@5.2.1(react@18.3.1):
     dependencies:

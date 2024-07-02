@@ -12,6 +12,7 @@ export default defineConfig({
       graph: resolve(__dirname, './src/graphql'),
       types: resolve(__dirname, './src/types'),
       'business/*': resolve(__dirname, './src/pages/business/*'),
+      'schemas/*': resolve(__dirname, './src/schemas/*'),
     },
   },
 });

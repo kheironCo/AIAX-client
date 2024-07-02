@@ -1,4 +1,4 @@
-import { AtomHeading as Heading } from 'kheiron-ui';
+import { Heading } from 'kheiron-ui';
 
 const Home = () => {
   return <Heading variant="h1">Header</Heading>;
