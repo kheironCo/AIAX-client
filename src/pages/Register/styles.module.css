@@ -14,10 +14,7 @@
   justify-content: center;
   align-items: center;
 }
-.org {
-  display: flex;
-  gap: 40px;
-}
+
 .img {
   width: 100%;
   max-width: 520px;
@@ -36,7 +33,7 @@
 }
 
 .form {
-  max-width: 360px;
+  max-width: 520px;
   /* padding-right: 50px; */
 }
 
